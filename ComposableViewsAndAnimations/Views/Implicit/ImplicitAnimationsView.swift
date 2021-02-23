@@ -42,6 +42,9 @@ struct ImplicitAnimationsView: View {
                         Button("Show Example 1") {
                             showExampleOne = true
                         }
+                        .sheet(isPresented: $showExampleOne) {
+                            IAExampleOneView(showThisView: $showExampleOne)
+                        }
 
                     }
 
@@ -65,7 +68,13 @@ struct ImplicitAnimationsView: View {
                         
                         Button("Show Example 2") {
                             showExampleTwo = true
-                        }                    }
+                        }
+                        .sheet(isPresented: $showExampleTwo) {
+                            IAExampleTwoView(showThisView: $showExampleTwo)
+                        }
+
+                        
+                    }
                     
                     // Example 3
                     // Animating state change for font face
@@ -86,6 +95,10 @@ struct ImplicitAnimationsView: View {
                         Button("Show Example 3") {
                             showExampleThree = true
                         }
+                        .sheet(isPresented: $showExampleThree) {
+                            IAExampleThreeView(showThisView: $showExampleThree)
+                        }
+
                         
                     }
 
@@ -98,15 +111,6 @@ struct ImplicitAnimationsView: View {
         }
         .padding()
         .navigationTitle("Implicit Animations")
-        .sheet(isPresented: $showExampleOne) {
-            IAExampleOneView(showThisView: $showExampleOne)
-        }
-        .sheet(isPresented: $showExampleTwo) {
-            IAExampleTwoView(showThisView: $showExampleTwo)
-        }
-        .sheet(isPresented: $showExampleThree) {
-            IAExampleThreeView(showThisView: $showExampleThree)
-        }
 
     }
 }

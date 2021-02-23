@@ -40,6 +40,8 @@ struct ExerciseThreeView: View {
             
             VStack {
                 
+                // NOTE: Here are some neat examples to consider...
+                //       https://medium.com/better-programming/create-an-awesome-loading-state-using-swiftui-9815ff6abb80
                 Text(typeFace)
                     .font(.custom(typeFace, size: 30.0))
                 

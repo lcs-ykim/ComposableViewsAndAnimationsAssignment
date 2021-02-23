@@ -12,9 +12,9 @@ struct ExercisesView: View {
     // MARK: Stored properties
     
     // Controls what example is showing in the pop-up sheet
-    @State private var showExampleOne = false
-    @State private var showExampleTwo = false
-    @State private var showExampleThree = false
+    @State private var showExerciseOne = false
+    @State private var showExerciseTwo = false
+    @State private var showExerciseThree = false
 
     // MARK: Computed properties
     var body: some View {
@@ -36,9 +36,13 @@ struct ExercisesView: View {
                             Use an implicit animation, and change text size, colour, and position when the text is tapped.
                             """)
                         
-                        Button("Show Example 1") {
-                            showExampleOne = true
+                        Button("Show Exercise 1") {
+                            showExerciseOne = true
                         }
+                        .sheet(isPresented: $showExerciseOne) {
+                            ExerciseOneView(showThisView: $showExerciseOne)
+                        }
+
 
                     }
                     
@@ -54,9 +58,13 @@ struct ExercisesView: View {
                             Use an explicit animation, and animate only the change in colour, while other state changes (like position and text size) are not animated.
                             """)
                         
-                        Button("Show Example 2") {
-                            showExampleTwo = true
+                        Button("Show Exercise 2") {
+                            showExerciseTwo = true
                         }
+                        .sheet(isPresented: $showExerciseTwo) {
+                            ExerciseTwoView(showThisView: $showExerciseTwo)
+                        }
+
 
                     }
 
@@ -72,9 +80,13 @@ struct ExercisesView: View {
                             Freestyle. Create an animation of your choosing.
                             """)
                         
-                        Button("Show Example 3") {
-                            showExampleThree = true
+                        Button("Show Exercise 3") {
+                            showExerciseThree = true
                         }
+                        .sheet(isPresented: $showExerciseThree) {
+                            ExerciseThreeView(showThisView: $showExerciseThree)
+                        }
+
 
                     }
 
@@ -86,15 +98,6 @@ struct ExercisesView: View {
         }
         .padding()
         .navigationTitle("Exercises")
-        .sheet(isPresented: $showExampleOne) {
-            ExerciseOneView(showThisView: $showExampleOne)
-        }
-        .sheet(isPresented: $showExampleTwo) {
-            ExerciseTwoView(showThisView: $showExampleTwo)
-        }
-        .sheet(isPresented: $showExampleThree) {
-            ExerciseThreeView(showThisView: $showExampleThree)
-        }
 
     }
 }
