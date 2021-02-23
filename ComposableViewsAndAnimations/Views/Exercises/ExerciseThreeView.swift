@@ -20,6 +20,9 @@ struct ExerciseThreeView: View {
 
     // Whether to apply the animation
     @State private var useAnimation = false
+    
+    // How much to rotate the text
+    @State private var rotationAmount = 0.0
 
     // MARK: Computed properties
 
@@ -44,6 +47,14 @@ struct ExerciseThreeView: View {
                 //       https://medium.com/better-programming/create-an-awesome-loading-state-using-swiftui-9815ff6abb80
                 Text(typeFace)
                     .font(.custom(typeFace, size: 30.0))
+                    .rotation3DEffect(.degrees(rotationAmount), axis: (x: 0,
+                                                                       y: 1,
+                                                                       z: 0))
+                    .onTapGesture {
+                        withAnimation {
+                            rotationAmount += 360.0
+                        }
+                    }
                 
             }
             .navigationTitle("Exercise 3")
