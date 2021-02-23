@@ -1,5 +1,5 @@
 //
-//  ExampleOneView.swift
+//  IAExampleOneView.swift
 //  ComposableViewsAndAnimations
 //
 //  Created by Russell Gordon on 2021-02-23.
@@ -43,7 +43,7 @@ struct ImplicitAnimationsView: View {
         .padding()
         .navigationTitle("Implicit Animations")
         .sheet(isPresented: $showExampleOne) {
-            ExampleOneView(showThisView: $showExampleOne)
+            IAExampleOneView(showThisView: $showExampleOne)
         }
         
     }

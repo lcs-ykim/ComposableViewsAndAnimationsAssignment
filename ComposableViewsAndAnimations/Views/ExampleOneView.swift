@@ -1,5 +1,5 @@
 //
-//  ExampleOneView.swift
+//  IAExampleOneView.swift
 //  ComposableViewsAndAnimations
 //
 //  Created by Russell Gordon on 2021-02-23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ExampleOneView: View {
+struct IAExampleOneView: View {
     
     // MARK: Stored properties
     
@@ -82,8 +82,8 @@ struct ExampleOneView: View {
     
 }
 
-struct ExampleOneView_Previews: PreviewProvider {
+struct IAExampleOneView_Previews: PreviewProvider {
     static var previews: some View {
-        ExampleOneView(showThisView: .constant(true))
+        IAExampleOneView(showThisView: .constant(true))
     }
 }
