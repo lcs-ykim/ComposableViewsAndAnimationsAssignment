@@ -15,6 +15,7 @@
 		0E8E8B0525E5442100012516 /* ImplicitAnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E8B0425E5442100012516 /* ImplicitAnimationsView.swift */; };
 		0E8E8B0A25E544D700012516 /* SimpleListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E8B0925E544D700012516 /* SimpleListItemView.swift */; };
 		81D2F45B25E5770300ACF089 /* IAExampleTwoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2F45A25E5770300ACF089 /* IAExampleTwoView.swift */; };
+		81D2F45F25E57B0900ACF089 /* IAExampleThreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2F45E25E57B0900ACF089 /* IAExampleThreeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		0E8E8B0425E5442100012516 /* ImplicitAnimationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImplicitAnimationsView.swift; sourceTree = "<group>"; };
 		0E8E8B0925E544D700012516 /* SimpleListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleListItemView.swift; sourceTree = "<group>"; };
 		81D2F45A25E5770300ACF089 /* IAExampleTwoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAExampleTwoView.swift; sourceTree = "<group>"; };
+		81D2F45E25E57B0900ACF089 /* IAExampleThreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAExampleThreeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				0E8E8B0425E5442100012516 /* ImplicitAnimationsView.swift */,
 				0E84E4E725E547650052BC69 /* IAExampleOneView.swift */,
 				81D2F45A25E5770300ACF089 /* IAExampleTwoView.swift */,
+				81D2F45E25E57B0900ACF089 /* IAExampleThreeView.swift */,
 				0E91AA9C25E5460F00115011 /* External */,
 			);
 			path = Views;
@@ -166,6 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81D2F45F25E57B0900ACF089 /* IAExampleThreeView.swift in Sources */,
 				0E8E8B0525E5442100012516 /* ImplicitAnimationsView.swift in Sources */,
 				0E8E8AF425E5434100012516 /* ContentView.swift in Sources */,
 				0E84E4E825E547660052BC69 /* IAExampleOneView.swift in Sources */,
