@@ -31,6 +31,14 @@ struct ContentView: View {
 
                     }
 
+                    NavigationLink(destination: TimingView()) {
+                        
+                        SimpleListItemView(title: "Animation Timing",
+                                           caption: "Different animation timings, illustrated")
+
+                    }
+
+                    
                     NavigationLink(destination: FontsView()) {
                         
                         SimpleListItemView(title: "Fonts",

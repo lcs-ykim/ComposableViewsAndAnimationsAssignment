@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0E84E4E825E547660052BC69 /* IAExampleOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E84E4E725E547650052BC69 /* IAExampleOneView.swift */; };
 		0E84E4F025E591F90052BC69 /* FontsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E84E4EF25E591F90052BC69 /* FontsView.swift */; };
+		0E84E4F625E598470052BC69 /* TimingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E84E4F525E598470052BC69 /* TimingView.swift */; };
 		0E8E8AF225E5434100012516 /* ComposableViewsAndAnimationsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E8AF125E5434100012516 /* ComposableViewsAndAnimationsApp.swift */; };
 		0E8E8AF425E5434100012516 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E8AF325E5434100012516 /* ContentView.swift */; };
 		0E8E8AF625E5434600012516 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E8E8AF525E5434600012516 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		0E84E4E725E547650052BC69 /* IAExampleOneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAExampleOneView.swift; sourceTree = "<group>"; };
 		0E84E4EF25E591F90052BC69 /* FontsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsView.swift; sourceTree = "<group>"; };
+		0E84E4F525E598470052BC69 /* TimingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimingView.swift; sourceTree = "<group>"; };
 		0E8E8AEE25E5434100012516 /* ComposableViewsAndAnimations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComposableViewsAndAnimations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E8E8AF125E5434100012516 /* ComposableViewsAndAnimationsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposableViewsAndAnimationsApp.swift; sourceTree = "<group>"; };
 		0E8E8AF325E5434100012516 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,6 +65,14 @@
 				0E84E4EF25E591F90052BC69 /* FontsView.swift */,
 			);
 			path = Typefaces;
+			sourceTree = "<group>";
+		};
+		0E84E4F425E598330052BC69 /* Timing */ = {
+			isa = PBXGroup;
+			children = (
+				0E84E4F525E598470052BC69 /* TimingView.swift */,
+			);
+			path = Timing;
 			sourceTree = "<group>";
 		};
 		0E8E8AE525E5434100012516 = {
@@ -107,6 +117,7 @@
 				0E8E8AF325E5434100012516 /* ContentView.swift */,
 				81D2F46225E57F1200ACF089 /* Implicit */,
 				81D2F46325E57F2800ACF089 /* Explicit */,
+				0E84E4F425E598330052BC69 /* Timing */,
 				0E84E4EE25E591D90052BC69 /* Typefaces */,
 				81D2F47025E583FB00ACF089 /* Exercises */,
 				0E91AA9C25E5460F00115011 /* External */,
@@ -229,6 +240,7 @@
 				81D2F47625E5851600ACF089 /* ExerciseOneView.swift in Sources */,
 				0E8E8AF425E5434100012516 /* ContentView.swift in Sources */,
 				0E84E4E825E547660052BC69 /* IAExampleOneView.swift in Sources */,
+				0E84E4F625E598470052BC69 /* TimingView.swift in Sources */,
 				81D2F47C25E5856E00ACF089 /* ExerciseThreeView.swift in Sources */,
 				0E8E8AF225E5434100012516 /* ComposableViewsAndAnimationsApp.swift in Sources */,
 				81D2F45B25E5770300ACF089 /* IAExampleTwoView.swift in Sources */,
