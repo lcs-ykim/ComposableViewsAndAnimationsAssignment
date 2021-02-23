@@ -51,7 +51,7 @@ struct ExerciseThreeView: View {
                                                                        y: 1,
                                                                        z: 0))
                     .onTapGesture {
-                        withAnimation {
+                        withAnimation(.interpolatingSpring(stiffness: 5, damping: 1)) {
                             rotationAmount += 360.0
                         }
                     }

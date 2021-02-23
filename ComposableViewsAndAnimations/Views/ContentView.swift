@@ -31,6 +31,13 @@ struct ContentView: View {
 
                     }
 
+                    NavigationLink(destination: FontsView()) {
+                        
+                        SimpleListItemView(title: "Fonts",
+                                           caption: "A complete list of fonts, or typefaces, available on iOS")
+
+                    }
+
                 }
                 
                 Section(header: Text("Exercises")) {
