@@ -1,14 +1,13 @@
 //
-//  IAExampleThreeView.swift
+//  IAExampleTwoView.swift
 //  ComposableViewsAndAnimations
 //
 //  Created by Russell Gordon on 2021-02-23.
 //
 
 import SwiftUI
-import UIKit
 
-struct IAExampleThreeView: View {
+struct IAExampleTwoView: View {
     
     // MARK: Stored properties
     
@@ -16,8 +15,11 @@ struct IAExampleThreeView: View {
     @Binding var showThisView: Bool
     
     // Controls the size of the circle
-    @State private var typeFace: String = "Helvetica-Neue"
+    @State private var scaleFactor: CGFloat = 1.0
 
+    // Controls the hue of the circle
+    @State private var hue: Color = .red
+    
     // Initialize a timer that will fire in one second
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
@@ -25,36 +27,34 @@ struct IAExampleThreeView: View {
     @State private var useAnimation = false
     
     // MARK: Computed properties
-
-    // List all fonts available
-    // NOTE: This is a very useful gist...
-    //       https://gist.github.com/kristopherjohnson/c825cb97b1ad1fe0bc13d709986d0763
-    private static let fontNames: [String] = {
-        var names: [String] = []
-        for familyName in UIFont.familyNames {
-            names.append(contentsOf: UIFont.fontNames(forFamilyName: familyName))
-        }
-        return names.sorted()
-    }()
-
     var body: some View {
         
         NavigationView {
             
             VStack {
                 
-                Text(typeFace)
-                    .font(.custom(typeFace, size: 30.0))
-                    .border(Color.blue, width: 1.0)
+                Circle()
+                    .foregroundColor(hue)
+                    .scaleEffect(scaleFactor)
                     .onTapGesture {
-                        typeFace = IAExampleThreeView.fontNames.randomElement()!
+                        if scaleFactor > 0.2 {
+                            // Reduce the size of the circle by a tenth
+                            scaleFactor -= 0.1
+                        } else {
+                            // Make sure the button doesn't entirely disappear
+                            scaleFactor = 1
+                            // Change the color of the view to a random hue
+                            hue = Color(hue: Double.random(in: 1...360) / 360.0,
+                                        saturation: 0.8,
+                                        brightness: 0.8)
+                        }
                     }
                 // When useAnimation is true, the default animation effect will be used.
                 // When useAnimation is false, there will be no animation.
-                    .animation(useAnimation ? .default : .none)
+//                    .animation(useAnimation ? .linear(duration: 2.5) : .none)
                 
             }
-            .navigationTitle("Example 3")
+            .navigationTitle("Example 2")
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Button("Done") {
@@ -86,8 +86,8 @@ struct IAExampleThreeView: View {
     
 }
 
-struct IAExampleThreeView_Previews: PreviewProvider {
+struct IAExampleTwoView_Previews: PreviewProvider {
     static var previews: some View {
-        IAExampleThreeView(showThisView: .constant(true))
+        IAExampleTwoView(showThisView: .constant(true))
     }
 }

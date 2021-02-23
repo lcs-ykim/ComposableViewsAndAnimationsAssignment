@@ -15,15 +15,31 @@ struct ContentView: View {
             
             List {
 
-                NavigationLink(destination: ImplicitAnimationsView()) {
-                    
-                    SimpleListItemView(title: "Implicit animations",
-                                       caption: "Animating state changes in SwiftUI")
+                Section(header: Text("Examples")) {
+
+                    NavigationLink(destination: ImplicitAnimationsView()) {
+                        
+                        SimpleListItemView(title: "Implicit animations",
+                                           caption: "Animating all state changes for a view")
+
+                    }
+
+                    NavigationLink(destination: ExplicitAnimationsView()) {
+                        
+                        SimpleListItemView(title: "Explicit animations",
+                                           caption: "Animating only some state changes")
+
+                    }
 
                 }
                 
+                Section(header: Text("Exercises")) {
+                    
+                }
+
             }
-            
+            .listStyle(GroupedListStyle())
+
         }
         .navigationTitle("Animations")
     }
