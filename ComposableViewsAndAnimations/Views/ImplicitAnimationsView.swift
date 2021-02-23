@@ -13,7 +13,8 @@ struct ImplicitAnimationsView: View {
     
     // Controls what example is showing in the pop-up sheet
     @State private var showExampleOne = false
-    
+    @State private var showExampleTwo = false
+
     // MARK: Computed properties
     var body: some View {
         ScrollView {
@@ -23,6 +24,7 @@ struct ImplicitAnimationsView: View {
                 Group {
                     Text("Example 1")
                         .font(.title2)
+                        .bold()
                         .padding(.top)
                     
                     Text("""
@@ -33,6 +35,25 @@ struct ImplicitAnimationsView: View {
                     
                     Button("Show Example 1") {
                         showExampleOne = true
+                    }
+
+                    Text("Example 2")
+                        .font(.title2)
+                        .bold()
+                        .padding(.top)
+                    
+                    Text("""
+                        The key thing to understand with implicit animations is that all state changes that impact the view are animated.
+
+                        In this example, the button still changes size when it is pressed. However, when it gets very small, and expands again, the hue changes to a new random value. Try it out. Then try uncommenting the .animation view modifier on line 54. Note how both state changes are animated when the button grows again.
+
+                        This example also demonstrates that the length of the animation can be controlled, too. Notice the animation type has been changed from .default to .linear with a duration of 2.5 seconds.
+
+                        One super cool feature of animations in SwiftUI is that they are interruptable. Try hammering on the circle with your trackpad – you will notice that a new animation to the new state begins, overriding the existing one. In essence, you can speed up the transition to a smaller circle.
+                        """)
+                    
+                    Button("Show Example 2") {
+                        showExampleTwo = true
                     }
                 }
                 .padding(.bottom)
@@ -45,7 +66,10 @@ struct ImplicitAnimationsView: View {
         .sheet(isPresented: $showExampleOne) {
             IAExampleOneView(showThisView: $showExampleOne)
         }
-        
+        .sheet(isPresented: $showExampleTwo) {
+            IAExampleTwoView(showThisView: $showExampleTwo)
+        }
+
     }
 }
 
