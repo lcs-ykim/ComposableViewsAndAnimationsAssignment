@@ -11,7 +11,12 @@ import SwiftUI
 struct ComposableViewsAndAnimationsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            
+            NavigationView {
+                
+                ContentView()
+                
+            }
         }
     }
 }
