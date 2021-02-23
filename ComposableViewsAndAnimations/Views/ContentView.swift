@@ -35,6 +35,13 @@ struct ContentView: View {
                 
                 Section(header: Text("Exercises")) {
                     
+                    NavigationLink(destination: ExercisesView()) {
+                        
+                        SimpleListItemView(title: "Exercises",
+                                           caption: "Try making some of your own animations")
+
+                    }
+
                 }
 
             }

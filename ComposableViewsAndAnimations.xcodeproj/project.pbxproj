@@ -18,6 +18,10 @@
 		81D2F45F25E57B0900ACF089 /* IAExampleThreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2F45E25E57B0900ACF089 /* IAExampleThreeView.swift */; };
 		81D2F46625E57F5500ACF089 /* ExplicitAnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2F46525E57F5500ACF089 /* ExplicitAnimationsView.swift */; };
 		81D2F46925E57FAE00ACF089 /* EAExampleOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2F46825E57FAE00ACF089 /* EAExampleOneView.swift */; };
+		81D2F47225E5843200ACF089 /* ExercisesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2F47125E5843200ACF089 /* ExercisesView.swift */; };
+		81D2F47625E5851600ACF089 /* ExerciseOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2F47525E5851600ACF089 /* ExerciseOneView.swift */; };
+		81D2F47925E5855600ACF089 /* ExerciseTwoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2F47825E5855600ACF089 /* ExerciseTwoView.swift */; };
+		81D2F47C25E5856E00ACF089 /* ExerciseThreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2F47B25E5856E00ACF089 /* ExerciseThreeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		81D2F45E25E57B0900ACF089 /* IAExampleThreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAExampleThreeView.swift; sourceTree = "<group>"; };
 		81D2F46525E57F5500ACF089 /* ExplicitAnimationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplicitAnimationsView.swift; sourceTree = "<group>"; };
 		81D2F46825E57FAE00ACF089 /* EAExampleOneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAExampleOneView.swift; sourceTree = "<group>"; };
+		81D2F47125E5843200ACF089 /* ExercisesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesView.swift; sourceTree = "<group>"; };
+		81D2F47525E5851600ACF089 /* ExerciseOneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseOneView.swift; sourceTree = "<group>"; };
+		81D2F47825E5855600ACF089 /* ExerciseTwoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTwoView.swift; sourceTree = "<group>"; };
+		81D2F47B25E5856E00ACF089 /* ExerciseThreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseThreeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +97,7 @@
 				0E8E8AF325E5434100012516 /* ContentView.swift */,
 				81D2F46225E57F1200ACF089 /* Implicit */,
 				81D2F46325E57F2800ACF089 /* Explicit */,
+				81D2F47025E583FB00ACF089 /* Exercises */,
 				0E91AA9C25E5460F00115011 /* External */,
 			);
 			path = Views;
@@ -120,6 +129,17 @@
 				81D2F46825E57FAE00ACF089 /* EAExampleOneView.swift */,
 			);
 			path = Explicit;
+			sourceTree = "<group>";
+		};
+		81D2F47025E583FB00ACF089 /* Exercises */ = {
+			isa = PBXGroup;
+			children = (
+				81D2F47125E5843200ACF089 /* ExercisesView.swift */,
+				81D2F47525E5851600ACF089 /* ExerciseOneView.swift */,
+				81D2F47825E5855600ACF089 /* ExerciseTwoView.swift */,
+				81D2F47B25E5856E00ACF089 /* ExerciseThreeView.swift */,
+			);
+			path = Exercises;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,11 +214,15 @@
 				81D2F45F25E57B0900ACF089 /* IAExampleThreeView.swift in Sources */,
 				0E8E8B0525E5442100012516 /* ImplicitAnimationsView.swift in Sources */,
 				81D2F46925E57FAE00ACF089 /* EAExampleOneView.swift in Sources */,
+				81D2F47625E5851600ACF089 /* ExerciseOneView.swift in Sources */,
 				0E8E8AF425E5434100012516 /* ContentView.swift in Sources */,
 				0E84E4E825E547660052BC69 /* IAExampleOneView.swift in Sources */,
+				81D2F47C25E5856E00ACF089 /* ExerciseThreeView.swift in Sources */,
 				0E8E8AF225E5434100012516 /* ComposableViewsAndAnimationsApp.swift in Sources */,
 				81D2F45B25E5770300ACF089 /* IAExampleTwoView.swift in Sources */,
 				0E8E8B0A25E544D700012516 /* SimpleListItemView.swift in Sources */,
+				81D2F47925E5855600ACF089 /* ExerciseTwoView.swift in Sources */,
+				81D2F47225E5843200ACF089 /* ExercisesView.swift in Sources */,
 				81D2F46625E57F5500ACF089 /* ExplicitAnimationsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
