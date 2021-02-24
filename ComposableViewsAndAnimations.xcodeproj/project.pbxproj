@@ -24,6 +24,7 @@
 		81D2F47625E5851600ACF089 /* ExerciseOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2F47525E5851600ACF089 /* ExerciseOneView.swift */; };
 		81D2F47925E5855600ACF089 /* ExerciseTwoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2F47825E5855600ACF089 /* ExerciseTwoView.swift */; };
 		81D2F47C25E5856E00ACF089 /* ExerciseThreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2F47B25E5856E00ACF089 /* ExerciseThreeView.swift */; };
+		81D2F48325E7199300ACF089 /* TutorialsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2F48225E7199300ACF089 /* TutorialsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		81D2F47525E5851600ACF089 /* ExerciseOneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseOneView.swift; sourceTree = "<group>"; };
 		81D2F47825E5855600ACF089 /* ExerciseTwoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTwoView.swift; sourceTree = "<group>"; };
 		81D2F47B25E5856E00ACF089 /* ExerciseThreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseThreeView.swift; sourceTree = "<group>"; };
+		81D2F48225E7199300ACF089 /* TutorialsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				0E84E4F425E598330052BC69 /* Timing */,
 				0E84E4EE25E591D90052BC69 /* Typefaces */,
 				81D2F47025E583FB00ACF089 /* Exercises */,
+				81D2F48025E7195F00ACF089 /* Tutorials */,
 				0E91AA9C25E5460F00115011 /* External */,
 			);
 			path = Views;
@@ -162,6 +165,14 @@
 				81D2F47B25E5856E00ACF089 /* ExerciseThreeView.swift */,
 			);
 			path = Exercises;
+			sourceTree = "<group>";
+		};
+		81D2F48025E7195F00ACF089 /* Tutorials */ = {
+			isa = PBXGroup;
+			children = (
+				81D2F48225E7199300ACF089 /* TutorialsView.swift */,
+			);
+			path = Tutorials;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +248,7 @@
 				0E8E8B0525E5442100012516 /* ImplicitAnimationsView.swift in Sources */,
 				81D2F46925E57FAE00ACF089 /* EAExampleOneView.swift in Sources */,
 				0E84E4F025E591F90052BC69 /* FontsView.swift in Sources */,
+				81D2F48325E7199300ACF089 /* TutorialsView.swift in Sources */,
 				81D2F47625E5851600ACF089 /* ExerciseOneView.swift in Sources */,
 				0E8E8AF425E5434100012516 /* ContentView.swift in Sources */,
 				0E84E4E825E547660052BC69 /* IAExampleOneView.swift in Sources */,

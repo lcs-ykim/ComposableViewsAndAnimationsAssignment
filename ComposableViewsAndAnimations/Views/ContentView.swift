@@ -31,6 +31,21 @@ struct ContentView: View {
 
                     }
 
+                }
+                
+                Section(header: Text("Exercises")) {
+                    
+                    NavigationLink(destination: ExercisesView()) {
+                        
+                        SimpleListItemView(title: "Exercises",
+                                           caption: "Try making some of your own animations")
+
+                    }
+
+                }
+
+                Section(header: Text("Reference")) {
+                    
                     NavigationLink(destination: TimingView()) {
                         
                         SimpleListItemView(title: "Animation Timing",
@@ -46,19 +61,15 @@ struct ContentView: View {
 
                     }
 
-                }
-                
-                Section(header: Text("Exercises")) {
-                    
-                    NavigationLink(destination: ExercisesView()) {
+                    NavigationLink(destination: TutorialsView()) {
                         
-                        SimpleListItemView(title: "Exercises",
-                                           caption: "Try making some of your own animations")
+                        SimpleListItemView(title: "Tutorials",
+                                           caption: "Now you know the basics. Dig in here to learn more.")
 
                     }
 
                 }
-
+                
             }
             .listStyle(GroupedListStyle())
 

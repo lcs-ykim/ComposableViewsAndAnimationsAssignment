@@ -21,6 +21,13 @@ struct FontsView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 8) {
+                Text("This is a list of all fonts available on iOS.")
+                    .padding(.bottom, 5)
+                Text("To use a font, add a modifier like so, with the name of the font as it is shown in this list:")
+                    .padding(.bottom, 5)
+                Text(".font(Font.custom(\"Baskerville-Italic\", size: 16)")
+                    .font(Font.custom("Courier-Bold", size: 11))
+                    .padding(.bottom, 15)
                 ForEach(FontsView.fontNames, id: \.self) { fontName in
                     Text(fontName)
                         .font(Font.custom(fontName, size: 17))
@@ -28,7 +35,7 @@ struct FontsView: View {
             }
             .padding()
         }
-        .navigationTitle("All Fonts")
+        .navigationTitle("Fonts")
     }
 }
 

@@ -134,6 +134,7 @@ struct TimingView: View {
             }, label: { Text("Animate") })
             Toggle(isOn: $slowAnimations, label: { Text("Slow Animations") })
         }
+        .navigationTitle("Animation Timing")
     }
 }
 
