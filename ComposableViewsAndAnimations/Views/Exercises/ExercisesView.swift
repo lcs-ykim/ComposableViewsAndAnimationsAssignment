@@ -33,7 +33,9 @@ struct ExercisesView: View {
                             .padding(.top)
                         
                         Text("""
-                            Use an implicit animation, and change text size, colour, and position when the text is tapped.
+                            Use an implicit animation, and change the shape's size, colour, and position when the text is tapped.
+
+                            Make the state changes occur when the shape is tapped.
                             """)
                         
                         Button("Show Exercise 1") {
@@ -55,7 +57,11 @@ struct ExercisesView: View {
                             .padding(.top)
                         
                         Text("""
-                            Use an explicit animation, and animate only the change in colour, while other state changes (like position and text size) are not animated.
+                            Use an explicit animation, and animate a change in state for just one property, while other state changes are not animated.
+
+                            For example, you might animate a change in position, while not animating a change in colour or size.
+
+                            Make the state changes occur when the shape is tapped.
                             """)
                         
                         Button("Show Exercise 2") {
@@ -78,6 +84,8 @@ struct ExercisesView: View {
                         
                         Text("""
                             Freestyle. Create an animation of your choosing.
+
+                            Use text, a shape, both, or something else.
                             """)
                         
                         Button("Show Exercise 3") {

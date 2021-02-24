@@ -42,8 +42,17 @@ struct ExerciseThreeView: View {
                 
                 // NOTE: Here are some neat examples to consider...
                 //       https://medium.com/better-programming/create-an-awesome-loading-state-using-swiftui-9815ff6abb80
+                //
+                // NOTE: You might be wondering, in what ways can a view be manipulated?
+                //       Scroll down to the "Transforming views" section of this page...
+                //
+                // https://www.hackingwithswift.com/quick-start/swiftui
                 Text(typeFace)
                     .font(.custom(typeFace, size: 30.0))
+                
+                Capsule()
+                    .frame(width: 200, height: 100)
+                    .foregroundColor(.red)
                 
             }
             .navigationTitle("Exercise 3")
