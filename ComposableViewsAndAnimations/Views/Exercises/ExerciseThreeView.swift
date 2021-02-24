@@ -20,6 +20,9 @@ struct ExerciseThreeView: View {
 
     // Whether to apply the animation
     @State private var useAnimation = false
+    
+    // How much to rotate the text
+    @State private var rotationAmount = 0.0
 
     // MARK: Computed properties
 
@@ -49,6 +52,14 @@ struct ExerciseThreeView: View {
                 // https://www.hackingwithswift.com/quick-start/swiftui
                 Text(typeFace)
                     .font(.custom(typeFace, size: 30.0))
+                    .rotation3DEffect(.degrees(rotationAmount), axis: (x: 0,
+                                                                       y: 1,
+                                                                       z: 0))
+                    .onTapGesture {
+                        withAnimation(.interpolatingSpring(stiffness: 5, damping: 1)) {
+                            rotationAmount += 360.0
+                        }
+                    }
                 
                 Capsule()
                     .frame(width: 200, height: 100)

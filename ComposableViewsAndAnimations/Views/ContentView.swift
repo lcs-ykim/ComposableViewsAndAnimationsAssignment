@@ -31,6 +31,21 @@ struct ContentView: View {
 
                     }
 
+                    NavigationLink(destination: TimingView()) {
+                        
+                        SimpleListItemView(title: "Animation Timing",
+                                           caption: "Different animation timings, illustrated")
+
+                    }
+
+                    
+                    NavigationLink(destination: FontsView()) {
+                        
+                        SimpleListItemView(title: "Fonts",
+                                           caption: "A complete list of fonts, or typefaces, available on iOS")
+
+                    }
+
                 }
                 
                 Section(header: Text("Exercises")) {
