@@ -22,27 +22,36 @@ struct CompletionMeter: View {
     @State private var useAnimation = false
     
     // Show the completion animation after 1 second
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    let timer = Timer.publish(every: 0.03, on: .main, in: .common).autoconnect()
     
     var body: some View {
         
-        Circle()
+        ZStack {
             
-            // Traces, or makes a trim, for the outline of a shape
-            .trim(from: 0, to: completionAmount)
-            .stroke(Color.red, lineWidth: 20)
-            .frame(width: 200, height: 200)
-            .rotationEffect(.degrees(-90))
-            .onReceive(timer) { _ in
+            Circle()
                 
-                // Animate the trim being closed completely on the circle
-                withAnimation(.easeIn(duration: 3.0)) {
-                    completionAmount = fillToValue / 100.0
+                // Traces, or makes a trim, for the outline of a shape
+                .trim(from: 0, to: completionAmount)
+                .stroke(Color.red, lineWidth: 20)
+                .frame(width: 200, height: 200)
+                .rotationEffect(.degrees(-90))
+                .onReceive(timer) { _ in
+                    
+                    // Stop when completion amount reaches the fill to value
+                    guard completionAmount < fillToValue / 100.0 else { return }
+                    
+                    // Animate the trim being closed
+                    withAnimation(.linear(duration: 0.03)) {
+                        completionAmount += fillToValue / 100.0 / 100.0
+                    }
+                    
                 }
-                
-                // Stop the timer from continuing to fire
-                timer.upstream.connect().cancel()
-            }
+            
+            Text("\(String(format: "%3.0f", (completionAmount) * 100.0 ))%")
+                .font(Font.custom("Courier-Bold", size: 24.0))
+                .animation(.linear(duration: 0.03))
+
+        }
     }
     
 }

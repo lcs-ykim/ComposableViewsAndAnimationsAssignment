@@ -34,7 +34,7 @@ struct CompletionMeterDescriptionView: View {
                         Then navigate to the view to see the progress meter.
                         """)
                     
-                    Slider(value: $percentComplete, in: 0...100, step: 0.1) {
+                    Slider(value: $percentComplete, in: 0...100, step: 1.0) {
                         Text("Completion amount")
                     }
                                         
@@ -45,7 +45,7 @@ struct CompletionMeterDescriptionView: View {
             
             NavigationLink(destination: CompletionMeter(fillToValue: percentComplete)) {
                 SimpleListItemView(title: "Completion Meter",
-                                   caption: "Will illustrate fill to \(String(format: "%.2f", percentComplete))%")
+                                   caption: "Will illustrate fill to \(String(format: "%.0f", percentComplete))%")
             }
             
         }
