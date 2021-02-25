@@ -10,7 +10,7 @@ import SwiftUI
 struct EncouragementDescriptionView: View {
     
     // MARK: Stored properties
-    @State private var percentComplete: CGFloat = 50.0
+    @State private var phrase: String = ""
     
     // MARK: Computed properties
     var body: some View {
@@ -27,30 +27,28 @@ struct EncouragementDescriptionView: View {
                         .padding(.top)
                     
                     Text("""
-                        This view could be used within an app to show how far someone has progressed through a tutorial, or their score after completing a quiz.
+                        Many games or apps include reactions to how a player is faring.
 
-                        Select a value below using the slider.
+                        This is an example of a fun animation to encourage a user.
 
-                        Then navigate to the view to see the progress meter.
+                        Type a short phrase, like "Wow!" or "Super!" and try it out.
                         """)
                     
-                    Slider(value: $percentComplete, in: 0...100, step: 1.0) {
-                        Text("Completion amount")
-                    }
-                                        
+                    TextField("Enter some encouragement", text: $phrase)
+                    
                 }
                 .padding(.bottom)
-
+                
             }
             
-            NavigationLink(destination: CompletionMeterView(fillToValue: percentComplete)) {
-                SimpleListItemView(title: "Completion Meter",
-                                   caption: "Will illustrate fill to \(String(format: "%.0f", percentComplete))%")
+            NavigationLink(destination: EncouragementView(message: phrase)) {
+                SimpleListItemView(title: "Encouragement",
+                                   caption: "The animation will say: \(phrase)")
             }
             
         }
         .padding()
-        .navigationTitle("Completion Meter")
+        .navigationTitle("Encouragement")
         
     }
 }
