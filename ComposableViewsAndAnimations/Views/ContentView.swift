@@ -79,6 +79,13 @@ struct ContentView: View {
 
                     }
 
+                    NavigationLink(destination: EncouragementDescriptionView()) {
+                        
+                        SimpleListItemView(title: "Encouragement",
+                                           caption: "Use this view to provide feedback to a user")
+
+                    }
+                    
                 }
                 
             }
