@@ -42,7 +42,7 @@ struct TutorialsView: View {
 
                     Group {
 
-                        Text("Tranforming Views")
+                        Text("Transforming Views")
                             .font(.title2)
                             .bold()
                             .padding(.top)
