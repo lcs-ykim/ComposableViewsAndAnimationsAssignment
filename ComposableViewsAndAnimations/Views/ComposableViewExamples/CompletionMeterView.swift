@@ -1,5 +1,5 @@
 //
-//  CompletionMeter.swift
+//  CompletionMeterView.swift
 //  ComposableViewsAndAnimations
 //
 //  Created by Russell Gordon on 2021-02-23.
@@ -8,20 +8,21 @@
 import SwiftUI
 import UIKit
 
-struct CompletionMeter: View {
+struct CompletionMeterView: View {
     
     // MARK: Stored properties
     
     // Show completion up to what percentage?
     var fillToValue: CGFloat
     
-    // Controls the amount of trim to show
+    // Controls the amount of trim to show, as a percentage
     @State private var completionAmount: CGFloat = 0.0
     
     // Whether to apply the animation
     @State private var useAnimation = false
     
-    // Show the completion animation after 1 second
+    // Update the animation on this interval (every 0.03 seconds)
+    // The full animation will always take 3 seconds
     let timer = Timer.publish(every: 0.03, on: .main, in: .common).autoconnect()
     
     var body: some View {
@@ -31,6 +32,7 @@ struct CompletionMeter: View {
             Circle()
                 
                 // Traces, or makes a trim, for the outline of a shape
+                // 0 is no trim, 1 is trim around the entire outline of the shape
                 .trim(from: 0, to: completionAmount)
                 .stroke(Color.red, lineWidth: 20)
                 .frame(width: 200, height: 200)
@@ -47,7 +49,7 @@ struct CompletionMeter: View {
                     
                 }
             
-            Text("\(String(format: "%3.0f", (completionAmount) * 100.0 ))%")
+            Text("\(String(format: "%3.0f", (completionAmount) * 100.0))%")
                 .font(Font.custom("Courier-Bold", size: 24.0))
                 .animation(.linear(duration: 0.03))
 
@@ -56,8 +58,8 @@ struct CompletionMeter: View {
     
 }
 
-struct CompletionMeter_Previews: PreviewProvider {
+struct CompletionMeterView_Previews: PreviewProvider {
     static var previews: some View {
-        CompletionMeter(fillToValue: 75)
+        CompletionMeterView(fillToValue: 75)
     }
 }

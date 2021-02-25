@@ -1,5 +1,5 @@
 //
-//  CompletionMeterDescriptionView.swift
+//  EncouragementDescriptionView.swift
 //  ComposableViewsAndAnimations
 //
 //  Created by Russell Gordon on 2021-02-23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CompletionMeterDescriptionView: View {
+struct EncouragementDescriptionView: View {
     
     // MARK: Stored properties
     @State private var percentComplete: CGFloat = 50.0
@@ -55,10 +55,10 @@ struct CompletionMeterDescriptionView: View {
     }
 }
 
-struct CompletionMeterDescriptionView_Previews: PreviewProvider {
+struct EncouragementDescriptionView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            CompletionMeterDescriptionView()
+            EncouragementDescriptionView()
         }
     }
 }
