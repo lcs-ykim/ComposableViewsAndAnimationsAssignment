@@ -15,7 +15,7 @@ struct ContentView: View {
             
             List {
 
-                Section(header: Text("Examples")) {
+                Section(header: Text("Basic Examples")) {
 
                     NavigationLink(destination: ImplicitAnimationsView()) {
                         
@@ -65,6 +65,17 @@ struct ContentView: View {
                         
                         SimpleListItemView(title: "Tutorials",
                                            caption: "Now you know the basics. Dig in here to learn more.")
+
+                    }
+
+                }
+                
+                Section(header: Text("Composable View Examples")) {
+
+                    NavigationLink(destination: CompletionMeterDescriptionView()) {
+                        
+                        SimpleListItemView(title: "Completion Meter",
+                                           caption: "This can be used to indicate progress")
 
                     }
 

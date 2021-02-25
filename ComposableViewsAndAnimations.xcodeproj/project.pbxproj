@@ -16,6 +16,8 @@
 		0E8E8AF925E5434600012516 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E8E8AF825E5434600012516 /* Preview Assets.xcassets */; };
 		0E8E8B0525E5442100012516 /* ImplicitAnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E8B0425E5442100012516 /* ImplicitAnimationsView.swift */; };
 		0E8E8B0A25E544D700012516 /* SimpleListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E8B0925E544D700012516 /* SimpleListItemView.swift */; };
+		81331FA925E721C800CFDB02 /* CompletionMeterDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2F48B25E71FA400ACF089 /* CompletionMeterDescriptionView.swift */; };
+		81331FAB25E721CB00CFDB02 /* CompletionMeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2F48A25E71FA400ACF089 /* CompletionMeter.swift */; };
 		81D2F45B25E5770300ACF089 /* IAExampleTwoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2F45A25E5770300ACF089 /* IAExampleTwoView.swift */; };
 		81D2F45F25E57B0900ACF089 /* IAExampleThreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2F45E25E57B0900ACF089 /* IAExampleThreeView.swift */; };
 		81D2F46625E57F5500ACF089 /* ExplicitAnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2F46525E57F5500ACF089 /* ExplicitAnimationsView.swift */; };
@@ -48,6 +50,8 @@
 		81D2F47825E5855600ACF089 /* ExerciseTwoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTwoView.swift; sourceTree = "<group>"; };
 		81D2F47B25E5856E00ACF089 /* ExerciseThreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseThreeView.swift; sourceTree = "<group>"; };
 		81D2F48225E7199300ACF089 /* TutorialsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialsView.swift; sourceTree = "<group>"; };
+		81D2F48A25E71FA400ACF089 /* CompletionMeter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionMeter.swift; sourceTree = "<group>"; };
+		81D2F48B25E71FA400ACF089 /* CompletionMeterDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionMeterDescriptionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,12 +65,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0E84E4EE25E591D90052BC69 /* Typefaces */ = {
+		0E84E4EE25E591D90052BC69 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
 				0E84E4EF25E591F90052BC69 /* FontsView.swift */,
 			);
-			path = Typefaces;
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		0E84E4F425E598330052BC69 /* Timing */ = {
@@ -119,10 +123,11 @@
 				0E8E8AF325E5434100012516 /* ContentView.swift */,
 				81D2F46225E57F1200ACF089 /* Implicit */,
 				81D2F46325E57F2800ACF089 /* Explicit */,
-				0E84E4F425E598330052BC69 /* Timing */,
-				0E84E4EE25E591D90052BC69 /* Typefaces */,
 				81D2F47025E583FB00ACF089 /* Exercises */,
+				0E84E4F425E598330052BC69 /* Timing */,
+				0E84E4EE25E591D90052BC69 /* Fonts */,
 				81D2F48025E7195F00ACF089 /* Tutorials */,
+				81D2F48825E71F5D00ACF089 /* ComposableViewExamples */,
 				0E91AA9C25E5460F00115011 /* External */,
 			);
 			path = Views;
@@ -173,6 +178,15 @@
 				81D2F48225E7199300ACF089 /* TutorialsView.swift */,
 			);
 			path = Tutorials;
+			sourceTree = "<group>";
+		};
+		81D2F48825E71F5D00ACF089 /* ComposableViewExamples */ = {
+			isa = PBXGroup;
+			children = (
+				81D2F48B25E71FA400ACF089 /* CompletionMeterDescriptionView.swift */,
+				81D2F48A25E71FA400ACF089 /* CompletionMeter.swift */,
+			);
+			path = ComposableViewExamples;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +258,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81331FA925E721C800CFDB02 /* CompletionMeterDescriptionView.swift in Sources */,
+				81331FAB25E721CB00CFDB02 /* CompletionMeter.swift in Sources */,
 				81D2F45F25E57B0900ACF089 /* IAExampleThreeView.swift in Sources */,
 				0E8E8B0525E5442100012516 /* ImplicitAnimationsView.swift in Sources */,
 				81D2F46925E57FAE00ACF089 /* EAExampleOneView.swift in Sources */,
