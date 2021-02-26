@@ -82,6 +82,6 @@ struct CustomComposableView: View {
 
 struct CustomComposableView_Previews: PreviewProvider {
     static var previews: some View {
-        CustomComposableView(duration: 0.5, hue: 0.0)
+        CustomComposableView(duration: 1.0, hue: 0.0)
     }
 }

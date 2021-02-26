@@ -10,7 +10,7 @@ import SwiftUI
 struct CustomComposableDescriptionView: View {
     
     // MARK: Stored properties
-    @State private var speed: String = "0.5"
+    @State private var speed: Double = 0.5
     @State private var color: Double = 0.0
     
     // MARK: Computed properties
@@ -40,7 +40,7 @@ struct CustomComposableDescriptionView: View {
                         .bold()
                         .padding(.top)
                     
-                    Section(header: Text("Choose the Speed. 5 is the fastest.")) {
+                    Section(header: Text("Choose the speed. 5 is the fastest.")) {
                         
                         Picker("Speed", selection: $speed) {
                             Text("1").tag(1.0)
@@ -72,7 +72,7 @@ struct CustomComposableDescriptionView: View {
                 
             }
             
-            NavigationLink(destination: CustomComposableView(duration: Double(speed)!, hue: color)) {
+            NavigationLink(destination: CustomComposableView(duration: speed, hue: color)) {
                 SimpleListItemView(title: "Loading sign",
                                    caption: "The bubbles will be in your choice of color and so is the speed.")
             }
